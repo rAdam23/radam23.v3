@@ -1,0 +1,2295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* <====== CONTAINER  ========================= > */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    height: auto;
+    padding: 0;
+}
+
+nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+nav a {
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .9px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link-1,.nav-link-2,.nav-link-3,.nav-link-4,.nav-link-5,.nav-link-6,.nav-link-7,.nav-link-8{
+    display: flex;
+}
+
+.sml-nav{
+    display: none;
+}
+
+.portfolio-sml-nav{
+    display: none;
+}
+
+.logo{
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: none;
+}
+
+.logo-span{
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-right: 1px;
+}
+
+.banner-radam-logo{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+
+.portfolio-nav{
+    grid-area: port-nav;
+    height: 60px;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav li{
+    padding: 0 0 0 60px;
+}
+
+nav a{
+    cursor: pointer;
+}
+
+li a:hover{
+    padding: 0 0 3px 0;
+    border-bottom: rgb(0, 0, 0);
+    border-bottom-width: 2.3px;
+    border-bottom-style: solid;
+    cursor: pointer;
+}
+
+.active-nav-link{
+    padding: 0 0 3px 0;
+    border-bottom: rgb(0, 0, 0);
+    border-bottom-width: 2.3px;
+    border-bottom-style: solid;
+}
+
+
+.portfolio-nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.portfolio-nav a{
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .9px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.portfolio-nav li{
+    padding: 0 0 0 50px;
+}
+
+.greyed-out a{
+    color: grey;
+}
+.greyed-out a:hover{
+    cursor: default;
+    border-bottom: none;
+}
+
+
+.landing{
+    grid-area: landing;
+    height:110vh;
+    background-size: cover;
+    background-position: 50% 0%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: top;
+    padding: 25vh 0 0 60px;
+}
+
+.landing-home{
+    background-image: url(images/little-flinders-copyright-radam23.jpg);
+}
+
+.banner-case-study{
+    grid-area: page-banner;
+    background-image: url(images/leonard-cotte-R5scocnOOdM-unsplash.jpg);
+    background-position: 50% 90%;
+    height:54vh;
+    min-height: 300px;
+    max-height: 700px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: top;
+    padding: 18vh 0 0 60px;
+}
+
+.rmit-landing{
+    background-image: url(images/mitchell-luo-rFaZua8_WHA-unsplash.jpg);
+    background-position: 50% 10%;
+}
+
+.radam23-landing{
+    background-image: url(images/melb-museum-copyright-radam23.jpg);
+    background-position: 50% 10%;
+}
+
+.title-txt{
+    color:black;
+    background-color: rgb(255, 253, 249);
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-wrap: none;
+    padding: 17px 25px;
+}
+
+.title-sub-txt{
+    color:black;
+    background-color: rgb(255, 253, 249);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-wrap: none;
+    padding: 17px 25px;
+}
+
+.margin-top{
+    margin: 20px 0 0 0;
+}
+
+.link-button{
+    padding: 14px 16px;
+    background-color: rgb(255, 255, 255);
+    margin: 30px 0 0 0;
+}
+
+.link-button-text{
+    font-size: .9rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0px;
+    text-decoration: underline;
+}
+
+
+
+/*  PORTFOLIO GRID SECTION  ==============================> */
+
+    .portfolio-grid-home{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 60px auto;
+        grid-template-areas:
+        "section-title-block section-title-block section-title-block section-title-block section-title-block"
+        "tile-1 tile-2 tile-3 tile-4 tile-5";
+        column-gap: 30px;
+        padding: 0px;
+        margin-top: 130px;
+        height: auto;
+    }
+
+/* DESIGN PORTFOLIO TITLE  */
+
+    .section-title-block{
+        grid-area: section-title-block;
+        display: flex;
+        align-items: top;
+        height: auto;
+    }
+
+    .section-title-text{
+        font-size: .9rem;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+
+/* PORTFOLIO TILES  */
+
+.tile{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "tile-img"
+    "tile-content";
+}
+
+.tile-1{
+    grid-area: tile-1;
+    height: auto;
+}
+
+.tile-2{
+    grid-area: tile-2;
+    height: auto;
+}
+
+.tile-3{
+    grid-area: tile-3;
+    height: auto;
+}
+
+.tile-4{
+    grid-area: tile-4;
+    height: auto;
+}
+
+.tile-5{
+    grid-area: tile-5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px auto;
+    grid-template-areas: 
+    "tile-img"
+    "tile-content";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-img {
+    grid-area: tile-img;
+    background-size: cover;
+    height: 14vh;
+    min-height: 180px;
+}
+
+.tile-content{
+    padding: 40px 0 0 0;
+    height: 300px;
+}
+
+.coming-soon{
+    color: #686868;
+}
+
+.tile-content a{
+    text-decoration: none;
+    color: black;
+}
+
+.tile-title{
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    padding: 0 0 20px 0;
+}
+
+.tile-text{
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.radam-word-r{
+    font-size: .70rem;
+    font-weight: 300;
+}
+
+.tile-next-text{
+    font-size: .85rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 0 0 10px 0;
+    text-decoration: underline;
+    width: 100px;
+    line-height: 1.75;
+}
+
+
+/* PORTFOLIO TILES IMAGES  */
+
+
+    .img-walley{
+        background-image: url(images/placeholder1.jpg);
+    }
+
+    .img-rmit{
+        background-image: url(images/placeholder2.jpg);
+    }
+
+    .img-radam{
+        background-image: url(images/placeholder3.jpg);
+    }
+
+    .img-hsbc{
+        background-image: url(images/placeholder1.jpg);
+        filter: opacity(70%) saturate(0%);
+    }
+
+
+
+/*  CONTACT GRID SECTION  ==============================> */
+
+
+    .contact-grid-home{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 60px auto;
+        grid-template-areas:
+        "section-title-block section-title-block section-title-block section-title-block section-title-block"
+        "contact-content contact-content contact-img contact-img contact-img";
+        column-gap: 30px;
+        padding: 0px;
+        margin-top: 130px;
+        height: 550px;
+        margin-bottom: 20vh;
+    }
+
+    .contact-content{
+        grid-area: contact-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-img{
+        grid-area: contact-img;
+        background-image: url(images/melb-museum-copyright-radam23.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .contact-text{
+        font-weight: 300;
+        line-height: 2;
+        letter-spacing: 1px;
+        width: 70%;
+        min-width: 200px;
+        margin-top: 0px;
+    }
+
+    .social-link-button{
+        padding: 14px 18px;
+        background-color: black;
+        color: white;
+        font-size: .85rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        line-height: 1;
+        width: fit-content;
+        margin: 15px 0 0 0;
+    }
+
+    .margin-top-contact{
+        margin: 30px 0 0 0;
+    }
+
+
+
+
+
+
+/*  PAGE - CASE STUDY - GRID 
+(this is the grid for all portfolio case studies)  ==============================> */
+/*  PAGE - CASE STUDY - GRID 
+(this is the grid for all portfolio case studies)  ==============================> */
+/*  PAGE - CASE STUDY - GRID 
+(this is the grid for all portfolio case studies)  ==============================> */
+
+
+
+.page-case-study-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto 340px auto auto auto auto 740px auto 199px;
+    grid-template-areas:
+    "nav nav nav nav nav nav "
+    "port-nav port-nav port-nav port-nav port-nav port-nav"
+    "page-banner page-banner page-banner page-banner page-banner page-banner"
+    "intro1 intro1 intro2 intro2 intro3 intro3"
+    "final-product-txt final-product-txt final-product final-product final-product final-product"
+    "comment comment comment comment comment comment"
+    "cs-tile1-box cs-tile1-box cs-tile2-box cs-tile2-box cs-tile3-box cs-tile3-box"
+    "moodboard1 moodboard1 moodboard1 moodboard1 moodboard2 moodboard2"
+    "ideation-txt ideation-txt ideation ideation ideation ideation"
+    "final-prototype-txt final-prototype-txt final-prototype final-prototype final-prototype final-prototype"
+    ". . . . . .";
+    column-gap: 60px;
+    padding: 0px;
+    height: auto;
+}
+
+
+
+
+/*  ORGANIZATION / THE BRIEF / MY ROLE  ===================================>  */
+
+.intro-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16% 5% 0 0;
+}
+
+.intro1{
+    grid-area: intro1;
+}
+
+.intro2{
+    grid-area: intro2;
+}
+
+.intro3{
+    grid-area: intro3;
+}
+
+
+/*  FINAL PRODUCT =========================================>  */
+
+    .final-product{
+        grid-area: final-product;
+        height: auto;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .walley-final-product{
+        background-image: url(images/walleybanque-app.svg);
+        background-size: contain;
+        height: 32vw;
+        max-height: 600px;
+    }
+
+    .rmit-final-product{
+        background-size: 78%;
+        background-position: 50% 50%;
+        height: 100%;
+    }
+
+    .final-gif{
+        height: 32vw;
+        max-height: 400px;
+        box-shadow: 10px 10px 8px #888888;
+    }
+
+    .radam23-final-product{
+        background-image: url(images/radam23-final-product-desktop.svg);
+        background-size: contain;
+    }
+
+    .final-product-txt{
+        grid-area: final-product-txt;
+        height: fit-content;
+        min-height: 500px;
+        padding: 0 15% 0 0;
+    }
+
+    .final-product2{
+        grid-area: final-product2;
+        height: 100%;
+        background-image: url(images/walley-placeholder1.svg);
+        background-size: 26vw;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+    }
+
+    .final-product3{
+        grid-area: final-product3;
+        height: 100%;
+        background-image: url(images/walley-placeholder2.svg);
+        background-size: 28vw;
+        background-repeat: no-repeat;
+        background-position: 50% 16%;
+    }
+
+    .final-product-txt-mob1,.final-product-txt-mob2{
+        display: none;
+    }
+
+
+/*  a COMMENT =========================================>  */
+
+    .comment-container{
+        grid-area: comment;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        margin: 12vh 0 0 0;
+    }
+
+    .walley-comment{
+        height: 24vw;
+        max-height: 300px;
+        margin: 10vh 0 0 0;
+    }
+
+    .radam23-comment{
+        height: 10vw;
+        max-height: 100px;
+    }
+
+    .rmit-comment{
+        height: 20vw;
+        max-height: 300px;
+        margin: 19vh 0 0 0;
+    }
+
+    .comment-container h1{
+        font-size: .75rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin: 0 0 20px 0;
+    }
+
+    .comment-container h4{
+        font-size: 1.15rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        line-height: 2;
+        max-width: 680px;
+    }
+
+
+/*  THE PROCESS (3 TILES) =========================================>  */
+
+    .cs-tile1-box{
+        grid-area: cs-tile1-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 260px auto;
+        grid-template-areas:
+        "cs-tile1-img"
+        "cs-tile1-txt";
+        margin-bottom: 80px;
+    }
+
+    .cs-tile2-box{
+        grid-area: cs-tile2-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 260px auto;
+        grid-template-areas:
+        "cs-tile2-img"
+        "cs-tile2-txt";
+        margin-bottom: 80px;
+    }
+
+    .cs-tile3-box{
+        grid-area: cs-tile3-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 260px auto;
+        grid-template-areas:
+        "cs-tile3-img"
+        "cs-tile3-txt";
+        margin-bottom: 80px;
+    }
+
+
+/*  TILE 1 ===================>  */
+
+    .cs-tile1-img{
+        grid-area: cs-tile1-img;
+        height: 100%;
+        background-position: 50% 50%;
+    }
+
+    .cs-tile1-txt{
+        grid-area: cs-tile1-txt;
+        margin-top: 40px;
+        min-height: 360px;
+    }
+
+    .walley-tile1{
+        background-image: url(images/placeholder1.jpg);
+        background-size: cover;
+    }
+    .rmit-tile1{
+        background-image: url(images/rmit-1-collab-ultra-mockup);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-color: rgb(202, 202, 202);
+    }
+    .radam-tile1{
+        background-image: url(images/eberhard-grossgasteiger--z-7576DRPM-unsplash.jpg);
+        background-size: cover;
+    }
+
+
+/*  TILE 2 ===================>  */
+
+    .cs-tile2-img{
+        grid-area: cs-tile2-img;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .cs-tile2-txt{
+        grid-area: cs-tile2-txt;
+        margin-top: 40px;
+        min-height: 360px;
+    }
+
+    .walley-tile2{
+        background-image: url(images/walley-user-needs-victor-xok-BHNVH_Ov9P8-unsplash.jpg);
+    }
+
+    .rmit-tile2{
+        background-image: url(images/rmit\ 3\ -\ UPDATED\ UX\ 2.2.4\ -\ Create\ a\ Persona\ \(Jenny\)\ copyright\ Adam\ di\ russo.png);
+        background-size: 80%;
+        background-color: rgb(109, 109, 109);
+        background-position: 50% 65%;
+    }
+    .radam-tile2{
+        background-image: url(images/radam23-moodboard.png);
+        background-size: 90%;
+        background-color: rgb(143, 143, 143);
+        background-position: 50% 50%;
+    }
+
+
+
+/*  TILE 3 ===================>  */
+
+    .cs-tile3-img{
+        grid-area: cs-tile3-img;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .cs-tile3-txt{
+        grid-area: cs-tile3-txt;
+        margin-top: 40px;
+        min-height: 360px;
+    }
+
+    .walley-tile3{
+        background-image: url(images/User-Flows-Walleybanque.png);
+        background-size: contain;
+        background-position: 100% 50%;
+        background-color: rgb(177, 192, 196);
+    }
+    .rmit-tile3{
+        background-image: url(images/rmit-2-annie-spratt-sggw4-qDD54-unsplash.jpg);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    .radam-tile3{
+        background-image: url(images/radam23-user-flows.png);
+        background-size: 90%;
+        background-color: rgb(143, 143, 143);
+        background-position: 50% 50%;
+    }
+
+
+/*   4 MOODBOARD + 5 BLISTER PACKS ===============================================>  */
+
+/*  TILE 4  ===================>  */
+
+.moodboard1-img-container{
+    grid-area: moodboard1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 530px auto;
+    grid-template-areas:
+    "moodboard1-img-box"
+    "moodboard1-txt";
+    margin-bottom: 240px;
+}
+
+.moodboard1-img-box{
+    grid-area: moodboard1-img-box;
+    height: 100%; 
+}
+
+.walley-moodboard-img-box{
+    background-image: linear-gradient(18deg,#fca505 15%,#00aebb 70%,#ff5697 90%)
+}
+
+.rmit-moodboard-img-box{
+    background-color: rgb(179, 179, 179);
+}
+
+.radam23-moodboard-img-box{
+    background-image: linear-gradient(18deg,#fca505 15%,#00aebb 70%,#ff5697 90%)
+}
+
+.moodboard1-img{
+    height: 530px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+.moodboard1-txt{
+    grid-area: moodboard1-txt;
+    margin-top: 40px;
+    width: 60%;
+}
+
+
+.walley-tile4{
+    background-image: url(images/Moodboard-Walleybanque.png);
+    background-size: contain;
+    background-position: 50% 50%;
+}
+.rmit-tile4{
+    background-image: url(images/rmit-4-Screen\ Shot\ 2020-08-28\ at\ 1.38.35\ pm.png);
+    background-size: 80%;
+    background-position: 50% 65%;
+}
+.radam-tile4{
+    background-image: url(images/radam23-wireframes-desktop.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+
+
+
+
+/*  TILE 5 -blister packets  ===================>  */
+
+.moodboard2-img-container{
+    grid-area: moodboard2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 530px auto;
+    grid-template-areas:
+    "moodboard2-img-box"
+    "moodboard2-txt";
+    margin-bottom: 240px;
+}
+
+.moodboard2-img-box{
+    grid-area: moodboard2-img-box;
+    height: 100%;
+}
+
+.moodboard2-img{
+    height: 530px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.moodboard2-txt{
+    grid-area: moodboard2-txt;
+    margin-top: 40px;
+}
+
+.walley-tile5{
+    background-image: url(images/Blister-Packets-Walleybanque.png);
+    background-size: 74%;
+    background-position: 50% 50%;
+    background-color: #4f5f74;
+}
+.rmit-tile5{
+    background-image: url(images/rmit-5-synthesis.png);
+    background-size: 80%;
+    background-position: 50% 50%;
+    background-color: rgb(131, 131, 131);
+}
+.radam-tile5{
+    background-image: url(images/radam23-code-desktop.png);
+    background-size: cover;
+    background-position: 90% 50%;
+}
+
+.rmit-bottom-margin{
+    margin-bottom: 200px;
+}
+
+/*  IDEATION =========================================>  */
+
+.ideation{
+    grid-area: ideation;
+    background-repeat: no-repeat;
+}
+
+.ideation-txt{
+    grid-area: ideation-txt;
+    height: 100%;
+    padding: 0 15% 0 0;
+    margin-bottom: 130px;
+}
+
+
+.walley-tile6{
+    height: 500px;
+    background-image: url(images/Wireframing-Prototypes.png);
+    background-size: contain;
+    background-position: 50% 0%;
+    background-color: #ffffff;
+}
+.rmit-tile6{
+    height: 500px;
+    background-image: url(images/rmit-6-ideation\,\ crazy\ 8s.png);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-color: rgb(109, 109, 109);
+}
+.radam-tile6{
+    background-image: url(images/radam-responsive-gif.gif);
+    background-size: contain;
+    background-position: 50% 0%;
+}
+
+
+
+/*  FINAL PROTOTYPE =========================================>  */
+
+.final-prototype{
+    grid-area: final-prototype;
+    height: 100%;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.final-prototype-txt{
+    grid-area: final-prototype-txt;
+    height: 100%;
+    padding: 0 15% 0 0;
+}
+
+
+
+.walley-final-prototype{
+    height: 570px;
+    background-image: url(images/walley-live-prototype-copyright-radam23.gif);
+}
+
+.rmit-final-prototype{
+    height: 570px;
+    background-image: url(images/rmit-final-product-desktop.svg);
+}
+
+.radam-final-prototype{
+    height: 570px;
+    background-image: url(images/radam23-final-product-desktop.svg);
+}
+
+
+
+
+
+
+/*<==== * LARGER THAN 1440 PX SCREENS *   ======>*/
+
+@media only screen and (max-width: 4000px) {
+
+
+    .container{
+        width: 100%;
+        padding: 0 40px;
+        max-width: 1440px;
+    }
+
+
+    .landing{
+        justify-content: center;
+        padding: 0 0 0 50px;
+    }
+
+    .page-grid-home{
+        padding: 120px 0;
+    }
+    
+    nav{
+        padding: 0 10px;
+    }
+
+    .portfolio-nav ul{
+        padding: 0 10px;
+    }
+}
+
+
+
+
+
+/*<==== * MOBILE VIEW *   ======>*/
+
+
+@media only screen and (max-width:1170px) {
+
+
+
+    /* <===== HOMEPAGE - LANDING ===========> */
+
+    .landing{
+        justify-content: center;
+        padding: 0 0 0 30px;
+    }
+
+    .banner-case-study{
+        max-height:520px;
+    }
+    
+        
+    .portfolio-grid-home{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px auto 80px auto;
+        grid-template-areas:
+        "section-title-block section-title-block"
+        "tile-1 tile-2"
+        ". ."
+        "tile-3 tile-4";
+        column-gap: 30px;
+        padding: 0px;
+        margin: 130px 0 0 0;
+        height: auto;
+    }
+
+    .tile{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "tile-img"
+        "tile-content";
+    }
+
+    .tile-img {
+        grid-area: tile-img;
+        background-size: cover;
+        height: 25vh;
+        min-height: 300px;
+    }
+
+    .tile-5{
+        display: none;
+    }
+ 
+
+
+
+    /* <===== HOMEPAGE - CONTACT SECTION ===========> */
+
+    .contact-grid-home{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px auto;
+        grid-template-areas:
+        "section-title-block section-title-block"
+        "contact-content contact-img";
+        column-gap: 30px;
+        padding: 0px;
+        margin-top: 130px;
+        height: auto;
+    }
+    
+    .contact-img{
+        grid-area: contact-img;
+        background-image: url(images/melb-museum-copyright-radam23.jpg);
+        background-position: 30% 30%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+    }
+
+
+
+    /* <===== CASE STUDIES PAGES (all case studies) ===========> */
+
+    .page-case-study-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto 340px auto auto auto auto auto 650px 560px 360px auto 49px;
+        grid-template-areas:
+        "nav nav nav nav nav nav" /*auto*/
+        "port-nav port-nav port-nav port-nav port-nav port-nav" /*auto*/
+        "page-banner page-banner page-banner page-banner page-banner page-banner" /*auto*/
+        "intro1 intro1 intro2 intro2 intro3 intro3" /*340px*/
+        "final-product-txt final-product-txt final-product final-product final-product final-product" /*480px*/
+        "comment comment comment comment comment comment" /*441px*/
+        "cs-tile1-box cs-tile1-box cs-tile1-box cs-tile2-box cs-tile2-box cs-tile2-box " /*auto*/
+        "cs-tile3-box cs-tile3-box cs-tile3-box cs-tile3-box cs-tile3-box cs-tile3-box" /*auto*/
+        "moodboard1 moodboard1 moodboard1 moodboard1 moodboard1 moodboard1" /*auto- moodboard*/
+        "moodboard2 moodboard2 moodboard2 moodboard2 moodboard2 moodboard2" /*auto- blisterpackets*/
+        "ideation ideation ideation ideation ideation ideation" /*560px*/
+        "ideation-txt ideation-txt ideation-txt ideation-txt ideation-txt ideation-txt" /*560px*/
+        "final-prototype-txt final-prototype-txt final-prototype final-prototype final-prototype final-prototype" /*600px*/
+        ". . . . . .";/*199px*/
+        column-gap: 60px;
+        padding: 0px;
+        height: auto;
+    }
+
+
+    .title-txt {
+        font-size: 2.2rem;
+    }
+    .banner-radam-logo{
+        font-size: 1.8rem;
+    }
+
+
+    /*<===========    The Final Product  ==============>*/
+
+    .final-product-txt{
+        grid-area: final-product-txt;
+        height: 100%;
+        padding: 16% 10% 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .final-product{
+        grid-area: final-product;
+        height: 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .walley-final-product{
+        background-image: url(images/walleybanque-app.svg);
+        background-size: 64vw;
+        background-position: 50% 50%;
+        height: 100%;
+    }
+
+    .final-gif{
+        height: 310px;
+    }
+
+
+    /*<===========    Comment container  ==============>*/
+
+    .comment-container{
+        grid-area: comment;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 0 0 0 0;
+        padding: 0 10% 5% 10%;
+    }
+
+    .walley-comment{
+        height: 35vw;
+        margin: 0 0 0 0;
+    }
+
+    .radam23-comment{
+        height: 10vw;
+    }
+
+    .rmit-comment{
+        height: 30vw;
+        min-height: 500px;
+        margin: 9vh 0 0 0;
+    }
+
+
+    /*<===========    Case study tiles   ==============>*/
+
+        /* Tile 1 =====>*/
+
+        .cs-tile1-box{
+            grid-area: cs-tile1-box;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px auto;
+            grid-template-areas:
+            "cs-tile1-img"
+            "cs-tile1-txt";
+            margin: 0 0 50px 0;
+        }
+
+        .cs-tile1-txt{
+            grid-area: cs-tile1-txt;
+            margin-top: 40px;
+            min-height: 270px;
+            padding: 0 0 0 0;
+            width: 70%;
+        }
+
+
+        /* Tile 2 =====>*/
+
+        .cs-tile2-box{
+            grid-area: cs-tile2-box;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px auto;
+            grid-template-areas:
+            "cs-tile2-img"
+            "cs-tile2-txt";
+            margin: 0 0 50px 0;
+        }
+
+        .cs-tile2-txt{
+            grid-area: cs-tile2-txt;
+            margin-top: 40px;
+            min-height: 270px;
+            padding: 0 0 0 0;
+            width: 70%;
+        }
+
+        .rmit-tile2{
+            background-size: 75%;
+            background-position: 50% 50%;
+        }
+
+
+        /* Tile 3 -User flows =====>*/
+
+        .cs-tile3-box{
+            grid-area: cs-tile3-box;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 500px 300px;
+            grid-template-areas:
+            "cs-tile3-img"
+            "cs-tile3-txt";
+            margin: 50px 0 0 0;
+        }
+
+        .cs-tile3-txt{
+            grid-area: cs-tile3-txt;
+            margin-top: 40px;
+            min-height: auto;
+            padding: 0 0 0 0;
+            width: 70%;
+        }
+
+        .cs-tile3-img{
+            grid-area: cs-tile3-img;
+            height: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .walley-tile3{
+            background-image: url(images/User-Flows-Walleybanque-tablet.png);
+            background-size: cover;
+            background-position: 0% 0%;
+            background-color: rgb(177, 192, 196);
+        }
+        .rmit-tile3{
+            background-image: url(images/rmit-2-annie-spratt-sggw4-qDD54-unsplash.jpg);
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        .radam-tile3{
+            background-image: url(images/radam23-user-flows.png);
+            background-size: 700px;
+            background-color: rgb(136, 136, 136);
+            background-position: 50% 50%;
+        }
+
+
+
+    /*<===========    Moodboard   ==============>*/
+
+    .moodboard1-img-container{
+        grid-area: moodboard1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 300px;
+        grid-template-areas:
+        "moodboard1-img-box"
+        "moodboard1-txt";
+        padding: 0 0;
+        margin: 50px 0 50px 0;
+    }
+
+    .moodboard1-img{
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+
+    .walley-tile4{
+        background-image: url(images/Moodboard-Walleybanque-tablet.png);
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+    .rmit-tile4{
+        background-image: url(images/rmit-4-Screen\ Shot\ 2020-08-28\ at\ 1.38.35\ pm.png);
+        background-size: 56vw;
+        background-position: 50% 50%;
+    }
+    .radam-tile4{
+        background-image: url(images/radam23-wireframes-desktop.png);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .moodboard1-txt{
+        grid-area: moodboard1-txt;
+        height: 100%;
+        padding: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: left;
+        text-align: left;
+        width: 70%;
+    }
+    
+    
+
+    /*<===========    Moodboards-Blister packets   ==============>*/
+    
+    .moodboard2-img-container{
+        grid-area: moodboard2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px;
+        grid-template-areas:
+        "moodboard2-txt moodboard2-img-box";
+        padding: 0 0;
+        margin: 50px 0 50px 0;
+    }
+
+    .moodboard2-img{
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .moodboard2-txt{
+        grid-area: moodboard2-txt;
+        margin-top: 0;
+        width: 80%;
+        padding: 0 0 0 0;
+    }
+    
+    .walley-tile5{
+        background-image: url(images/Blister-Packets-Walleybanque.png);
+        background-size: contain;
+        background-position: 50% 80%;
+        background-color: #4f5f74;
+    }
+    .rmit-tile5{
+        background-image: url(images/rmit-5-synthesis.png);
+        background-size: 49%;
+        background-position: 50% 50%;
+    }
+    .radam-tile5{
+        background-image: url(images/radam23-code-desktop.png);
+        background-size: cover;
+        background-position: 100% 50%;
+    }
+
+
+
+    /*<===========    Ideation-txts   ==============>*/
+
+    .ideation{
+        grid-area: ideation;
+        height: 90%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    
+    .ideation-txt{
+        grid-area: ideation-txt;
+        height: 100%;
+        padding: 0 15% 0 0;
+    }
+
+    .walley-tile6{
+        background-image: url(images/Wireframing-Prototypes-tablet.png);
+        background-size: contain;
+        background-position: 50% 80%;
+    }
+    .rmit-tile6{
+        background-image: url(images/rmit-6-ideation\,\ crazy\ 8s.png);
+        background-size: 90%;
+        background-position: 50% 50%;
+    }
+    .radam-tile6{
+        background-image: url(images/radam-responsive-gif.gif);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+
+
+
+    /*<===========    Final-prototype   ==============>*/
+
+    .final-prototype{
+        grid-area: final-prototype;
+        height: 549px;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+    
+    .final-prototype-txt{
+        grid-area: final-prototype-txt;
+        height: 100%;
+        padding: 0 15% 0 0;
+    }
+    
+
+    .walley-final-prototype{
+        background-image: url(images/walley-live-prototype-copyright-radam23.gif);
+        background-size: 58%;
+        background-position: 50% 0%;
+    }
+    
+    .rmit-final-prototype{
+        background-image: url(images/rmit-final-product-desktop.svg);
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+    
+    .radam-final-prototype{
+        background-image: url(images/radam23-final-product-desktop.svg);
+        background-size: contain;
+        background-position: 50% 0%;
+    }
+    
+
+
+    .contact-grid-home{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 60px auto auto;
+        grid-template-areas:
+        "section-title-block section-title-block section-title-block section-title-block section-title-block section-title-block"
+        "contact-img contact-img contact-img contact-img contact-img contact-img"
+        "contact-content contact-content contact-content contact-content contact-content contact-content ";
+        column-gap: 30px;
+        padding: 0px;
+        margin-top: 180px;
+        height: auto;
+        margin-bottom: 20vh;
+    }
+    
+    .contact-text{
+        font-weight: 300;
+        line-height: 2;
+        letter-spacing: 1px;
+        width: 80%;
+        min-width: 200px;
+        margin-top: 40px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*<==== * MOBILE VIEW *   ==================================================>*/
+/*<==== * MOBILE VIEW *   ==================================================>*/
+
+
+@media only screen and (max-width:879px) {
+
+
+    .container{
+        width: 100%;
+        padding: 0 40px;
+        max-width: 1440px;
+    }
+
+
+    /* <===== Navigation bars ===========> */
+
+   .nav-link-2,.nav-link-4,.nav-link-8{
+        display: none;
+    }
+
+    /* <===== CASE STUDIES PAGES (all case studies) ===========> */
+
+
+    .page-case-study-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto 99px;
+        grid-template-areas:
+        "nav nav nav nav nav nav" /*auto*/
+        "port-nav port-nav port-nav port-nav port-nav port-nav" /*auto*/
+        "page-banner page-banner page-banner page-banner page-banner page-banner" /*auto*/
+        "intro1 intro1 intro1 intro1 intro1 intro1 " /*auto*/
+        "intro2 intro2 intro2 intro2 intro2 intro2" /*auto*/
+        "intro3 intro3 intro3 intro3 intro3 intro3" /*auto*/
+        "final-product final-product final-product final-product final-product final-product" /*auto*/
+        "final-product-txt final-product-txt final-product-txt final-product-txt final-product-txt final-product-txt" /*auto*/
+        "comment comment comment comment comment comment" /*641px*/
+        "cs-tile1-box cs-tile1-box cs-tile1-box cs-tile1-box cs-tile1-box cs-tile1-box  " /*auto*/
+        "cs-tile2-box cs-tile2-box cs-tile2-box cs-tile2-box cs-tile2-box cs-tile2-box " /*auto*/
+        "cs-tile3-box cs-tile3-box cs-tile3-box cs-tile3-box cs-tile3-box cs-tile3-box" /*auto*/
+        "moodboard1 moodboard1 moodboard1 moodboard1 moodboard1 moodboard1" /*auto- moodboard*/
+        "moodboard2 moodboard2 moodboard2 moodboard2 moodboard2 moodboard2" /*auto- blisterpackets*/
+        "ideation ideation ideation ideation ideation ideation" /*auto*/
+        "ideation-txt ideation-txt ideation-txt ideation-txt ideation-txt ideation-txt" /*auto*/
+        "final-prototype final-prototype final-prototype final-prototype final-prototype final-prototype"/*auto*/
+        "final-prototype-txt final-prototype-txt final-prototype-txt final-prototype-txt final-prototype-txt final-prototype-txt " /*auto*/
+        ". . . . . .";/*99px*/
+        column-gap: 5vw;
+        padding: 0px;
+        height: auto;
+    }
+
+    .tile-title{
+        font-size: 1rem;
+    }
+
+    .tile-text{
+        font-size: 1rem;
+    }
+
+
+    .banner-case-study{
+        margin-bottom: 90px;
+        min-height: 300px;
+    }
+
+    /*  ORGANIZATION / THE BRIEF / MY ROLE  ===================================>  */
+
+    .intro-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: flex-start;
+        padding: 0 15% 0 0;
+        margin: 0 0 8vw 0;
+        height: auto;
+    }
+
+    
+    /*<===========    The Final Product  ==============>*/
+
+
+    .final-product{
+        grid-area: final-product;
+        height: auto;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        margin: 50px 0 0 0;
+    }
+
+    .rmit-margin{
+        margin: 90px 0 0 0;
+    }
+
+    .walley-final-product{
+        background-image: url(images/walleybanque-app-tablet.svg);
+        background-size: contain;
+        height: 82vw;
+    }
+
+    .rmit-final-product{
+        background-size: contain;
+        height: 82vw;
+    }
+
+    .radam23-final-product{
+        background-size: 93vw;
+        height: 70vw;
+    }
+
+    .final-product-txt{
+        grid-area: final-product-txt;
+        height: 100%;
+        padding: 0 15% 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: flex-start;
+        margin-top: 40px;
+    }
+
+
+    .final-gif{
+        height: 46vw;
+        margin-bottom: 40px;
+    }
+
+
+
+    /*<===========    Comment container  ==============>*/
+
+    .comment-container{
+        grid-area: comment;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0 0 0 0;
+        padding: 0 10% 0 10%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .comment-container h4{
+        font-size: 1.25rem;
+    }
+
+    .walley-comment, .rmit-comment{
+        height: 55vw;
+        min-height: 600px;
+        margin: 0 0 0 0;
+    }
+
+    .final-product-txt{
+        min-height: auto;
+    }
+
+
+/*<===========    Case study tiles   ==============>*/
+
+        /* Tile 1 =====>*/
+
+        .cs-tile1-box{
+            grid-template-rows: auto auto;
+        }
+
+        .walley-tile1{
+            height: 450px;
+        }
+
+        .cs-tile1-txt{
+            width: 100%;
+            padding: 0 15% 0 0;
+        }
+
+        .radam-tile1{
+            margin-top: 200px;
+            background-image: url(images/rmit-tile2-mobile-lrg.png);
+            background-size: contain;
+            height: 55vh;
+            background-repeat: no-repeat;
+            background-color: lightgray;
+        }
+
+        /* Tile 2 =====>*/
+
+        .cs-tile2-box{
+            grid-template-rows: 50vh auto;
+        }
+
+        .cs-tile2-txt{
+            width: 100%;
+            padding: 0 15% 0 0;
+        }
+
+        .rmit-tile2{
+            background-image: url(images/rmit-tile2-mobile-lrg.png);
+            background-size: contain;
+        }
+
+        .radam-tile2{
+            background-size: 78vw;
+        }
+
+
+        /* Tile 3 -User flows =====>*/
+
+        .cs-tile3-box{
+            grid-area: cs-tile3-box;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50vh auto;
+            grid-template-areas:
+            "cs-tile3-img"
+            "cs-tile3-txt";
+            margin: 50px 0 100px 0;
+        }
+
+        .cs-tile3-txt{
+            grid-area: cs-tile3-txt;
+            width: 100%;
+            margin-top: 40px;
+            padding: 0 15% 0 0;
+        }
+
+        .radam-tile3{
+            background-size: 78vw;
+        }
+
+
+
+
+    /*<===========    Moodboard   ==============>*/
+
+    .moodboard1-img-container{
+        grid-template-rows: auto auto;
+    }
+
+    .moodboard1-img{
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+
+    .moodboard1-txt{
+        width: 100%;
+        padding: 0 15% 0 0;
+        margin-bottom: 80px;
+    }
+
+
+    .walley-tile4{
+        height: 800px;
+        background-image: url(images/Moodboard-Walleybanque-mobile.png);
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+
+    .rmit-tile4{
+        height: 500px;
+        background-size: 80%;
+        background-position: 50% 50%;
+    }
+
+    .radam-tile4{
+        background-size: cover;
+        background-position: 5% 50%;
+    }
+        
+  /*<===========    Moodboards-Blister packets   ==============>*/
+    
+    .moodboard2-img-container{
+        grid-area: moodboard2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "moodboard2-img-box"
+        "moodboard2-txt";
+        padding: 0 0;
+        margin: 50px 0 90px 0;
+    }
+
+    .moodboard2-img{
+        height: 650px;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: 50% 50%;
+    }
+
+    .moodboard2-txt{
+        grid-area: moodboard2-txt;
+        margin-top: 40px;
+        width: 100%;
+        padding: 0 15% 0 0;
+        margin-bottom: 100px;
+    }
+
+    .rmit-tile5{
+        background-image: url(images/rmit-5-synthesis.png);
+        background-size: 460px;
+        background-position: 50% 50%;
+        background-color: rgb(163, 163, 163);
+    }
+
+    .radam-tile5{
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: rgb(163, 163, 163);
+    }
+
+
+    /*<===========    Ideation-txts   ==============>*/
+
+    .ideation{
+        grid-area: ideation;
+        height: 500px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    
+    .ideation-txt{
+        grid-area: ideation-txt;
+        height: fit-content;
+        padding: 0 15% 0 0;
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+
+    .walley-tile6{
+        height: 650px;
+        background-image: url(images/Wireframing-Prototypes-mobile.png);
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+    .rmit-tile6{
+        height: 550px;
+        background-image: url(images/rmit-6-ideation\,\ crazy\ 8s.png);
+        background-size: contain;
+        background-position: 50% 50%;
+        background-color: rgb(109, 109, 109);
+    }
+    .radam-tile6{
+        background-image: url(images/radam-responsive-gif.gif);
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+    
+
+ 
+    /*<===========    Final-prototype   ==============>*/
+
+    .final-prototype{
+        grid-area: final-prototype;
+        height: cover;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+    
+    .final-prototype-txt{
+        grid-area: final-prototype-txt;
+        height: 100%;
+        padding: 0 15% 0 0;
+        margin-top: 40px;
+    }
+    
+
+    .walley-final-prototype{
+        background-image: url(images/walley-live-prototype-copyright-radam23.gif);
+        background-size: 52%;
+        height: 80vw;
+        background-position: 50% 50%;
+    }
+    
+    .rmit-final-prototype{
+        background-image: url(images/rmit-final-product-desktop.svg);
+        background-size: contain;
+        height: 80vw;
+        background-position: 50% 50%;
+    }
+ 
+    .radam-final-prototype{
+        background-image: url(images/radam23-final-product-desktop.svg);
+        background-size: contain;
+        height: 80vw;
+        background-position: 50% 50%;
+    }
+
+
+    .walley-tile5{
+        background-size: 62%;
+    }
+
+}
+
+
+
+/*<==== * SML MOBILE SCREENS VIEW *   ==================================================>*/
+/*<==== * SML MOBILE SCREENS VIEW *   ==================================================>*/
+
+
+@media only screen and (max-width:652px) {
+
+
+    .container{
+        width: 100%;
+        padding: 0 25px;
+        max-width: 1440px;
+    }
+
+    /*<==== * DISPLAY CHANGES *   =================>*/
+
+    nav{
+        display: none;
+    }
+
+    .portfolio-nav{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .logo-span{
+        display: none;
+    }
+
+
+    /*<==== * SML NAV *   =================>*/
+
+
+    .banner-radam-logo{
+        font-size: 1.4rem;
+    }
+
+    .sml-nav{
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+    }
+
+    .portfolio-sml-nav{
+        grid-area: port-nav;
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+    }
+
+    .sml-logo{
+        display: flex;
+        font-size: .85rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+        text-transform: none;
+    }
+
+    .sml-logo-span{
+        display: flex;
+        font-size: .75rem;
+        align-items: flex-end;
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+
+    .nav-link-9,.nav-link-10{
+        font-size: .75rem;
+        font-weight: 00;
+        letter-spacing: .9px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+    }
+    
+
+    .sml-nav ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+    
+    .sml-nav li{
+        padding: 0 0 0 5vw;
+    }
+
+    .sml-nav a{
+        cursor: pointer;
+    }
+
+    .portfolio-sml-nav ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 0 10px;
+        height: 60px;
+    }
+    
+    .portfolio-sml-nav li,.portfolio-sml-nav a{
+        font-size: .75rem;
+        font-weight: 500;
+        letter-spacing: .9px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav-link-12{
+        margin:  0 5vw;
+        border-bottom-color: black;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
+
+    /*<==== * Banner *   =================>*/
+
+    .banner-case-study{
+        grid-area: page-banner;
+        height:48vh;
+        min-height: 250px;
+        max-height: 700px;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: top;
+        padding: 15vh 0 0 20px;
+    }
+
+    .rmit-landing{
+        background-size: 200%;
+        background-position: 50% 10%;
+    }
+    
+
+    .title-txt{
+        color:black;
+        background-color: rgb(255, 253, 249);
+        font-size: 1.7rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        word-wrap: none;
+        padding: 17px 10px;
+    }
+    
+    .title-sub-txt{
+        color:black;
+        background-color: rgb(255, 253, 249);
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        word-wrap: none;
+        padding: 17px 10px;
+    }
+
+
+    /*<==== WALLEYBANQUE ===>*/
+
+    .walley-tile1, .walley-tile2, .walley-tile3, .walley-tile4, .walley-tile5,.final-product{
+        height: 65vh;
+        min-height: 80vw;
+    }
+
+    .walley-tile6{
+        background-color: #cccccc;
+        height: 55vh;
+        background-size: 320px;
+        min-height: 500px;
+    }
+
+    .intro3{
+        margin-bottom: 140px;
+    }
+
+    .radam23-final-product {
+        background-image: url(images/radam23-final-product-desktop.svg);
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+
+    .final-product{
+        height: fit-content;
+    }
+
+    .rmit-final-product{
+        background-position: 50% 50%;
+        background-size: contain;
+    }
+
+    .radam23-final-product{
+        background-color: rgb(224, 224, 224);
+    }
+
+    .final-product-txt{
+        margin-top: 40px;
+    }
+
+    .ideation-txt{
+        margin-bottom: 200px;
+    }
+
+    .rmit-tile1, .rmit-tile2, .rmit-tile3{
+        background-position: 50% 50%;
+    }
+
+    .cs-tile1-box {
+        grid-template-rows: auto auto;
+    }
+
+    .cs-tile1-txt{
+        width: 100%;
+        padding: 0 15% 0 0;
+        margin-bottom: 60px;
+    }
+
+    .cs-tile2-box{
+        grid-template-rows: auto auto;
+    }
+
+    .cs-tile3-box{
+        grid-template-rows: auto auto;
+    }
+
+    .rmit-tile1{
+        height: 45vh;
+        background-color: rgb(133, 133, 133);
+        background-size: 90%;
+    }
+
+    .rmit-tile2{
+        height: 65vh;
+        background-image: url(images/rmit-tile2-mobile-lrg.png);
+        background-color: rgb(133, 133, 133);
+        background-size: contain;
+    }
+
+    .rmit-tile3{
+        height: 50vh;
+        background-size: cover;
+        background-position: 0% 50%;
+    }
+
+    .rmit-tile4{
+        height: 55vh;
+        background-image: url(images/rmit-tile4-mobile.png);
+        background-color: rgb(179, 179, 179);
+        background-size: contain;
+    }
+
+    .rmit-tile5{
+        height: 55vh;
+        background-image: url(images/rmit-tile5-mobile.png);
+        background-color: rgb(168, 168, 168);
+        background-size: contain;
+    }
+
+    .rmit-tile6{
+        height: 60vh;
+        background-image: url(images/rmit-tile6-mobile.png);
+        background-color: rgb(99, 99, 99);
+        background-size: contain;
+    }
+
+    .rmit-tile6{
+        height: 55vh;
+        background-image: url(images/rmit-tile6-mobile.png);
+        background-color: rgb(99, 99, 99);
+        background-size: 41vh;
+    }
+
+    .final-prototype{
+        height: cover;
+        margin-bottom: 40px;
+        background-size: contain;
+    }
+    
+    .walley-final-prototype{
+        height: 90vw;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .rmit-final-prototype{
+        height: 80vw;
+        background-color: rgb(211, 211, 211);
+    }
+
+    .contact-text{
+        font-weight: 300;
+        line-height: 2;
+        letter-spacing: 1px;
+        width: 90%;
+        min-width: 200px;
+        margin-top: 40px;
+    }
+
+    .moodboard2-img{
+        height: 650px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .radam-tile5{
+        height: 50vh;
+    }
+
+    .rmit-tile5{
+        background-size: 90%;
+    }
+
+    .margin-top{
+        margin: 10px 0 0 0;
+    }
+
+    .portfolio-grid-home{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px auto auto auto auto;
+        grid-template-areas:
+        "section-title-block"
+        "tile-1"
+        "tile-2"
+        "tile-3"
+        "tile-4";
+        column-gap: 30px;
+        padding: 0px;
+        margin: 130px 0 0 0;
+        height: auto;
+    }
+
+    .contact-grid-home{
+        margin: 40px 0 0 0;
+    }
+
+    .tile-text{
+        margin-bottom: 13vh;
+    }
+
+    .radam-tile2, .radam-tile3 {
+        height: 50vh;
+        background-size: 90%;
+    }
+
+    .radam-tile6 {
+        height: 50vh;
+        background-color: gray;
+        background-size: 90%;
+        background-position: 50% 50%;
+    }
+
+    .final-product-txt,.cs-tile1-txt,.moodboard1-txt,.moodboard2-txt{
+        margin-bottom: 0;
+    }
+
+    .tile-text{
+        margin-bottom: 5vh;
+    }
+
+
+    .walley-tile5{
+        background-size: 78%;
+    }
+
+}
+
+
+/*<==== * MINI MOBILE SCREENS VIEW *   ==================================================>*/
+/*<==== * MINI MOBILE SCREENS VIEW *   ==================================================>*/
+
+
+@media only screen and (max-width:452px) {
+
+
+    .title-txt{
+        color:black;
+        background-color: rgb(255, 253, 249);
+        font-size: 1.4rem;
+        padding: 14px 8px;
+    }
+
+    .banner-radam-logo{
+        font-size: 1rem;
+    }
+
+
+    .rmit-tile2{
+        height: 45vh;
+        background-image: url(images/rmit-tile2-mobile.png);
+        background-color: rgb(133, 133, 133);
+        background-size: contain;
+    }
+
+    .contact-img{
+        grid-area: contact-img;
+        background-image: url(images/melb-museum-copyright-radam23.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 50vh;
+    }
+
+    .landing{
+        height: 79vh;
+    }
+
+    .moodboard2-img{
+        height: 110vw;
+        background-repeat: no-repeat;
+        background-size: 81vw;
+        background-position: 50% 50%;
+    }
+
+    .radam-tile5{
+        background-size: 140%;
+        background-position: 90% 50%;
+    }
+
+    .moodboard2-img-container{
+        margin: 50px 0 50px 0;
+    }
+
+    .walley-final-prototype{
+        height: 130vw;
+    }
+
+    .rmit-tile6{
+        background-size: 80vw;
+    }
+
+
+    .walley-tile1, .walley-tile2, .walley-tile3, .walley-tile4, .walley-tile5, .final-product {
+        height: 45vh;
+        min-height: 80vw;
+}
+
+    .walley-tile6{
+        height: 55vh;
+        background-size: 78vw;
+    }
