@@ -8,6 +8,7 @@
 body{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -182,6 +183,12 @@ li a:hover{
     background-position: 50% 10%;
 }
 
+.contact-landing{
+    background-image: url(images/brick-wall-copyright-radam23-2021.jpg);
+    background-size: cover;
+    background-position: 50% 15%;
+}
+
 .title-txt{
     color:black;
     background-color: rgb(255, 253, 249);
@@ -237,6 +244,7 @@ li a:hover{
         height: auto;
     }
 
+
 /* DESIGN PORTFOLIO TITLE  */
 
     .section-title-block{
@@ -254,6 +262,9 @@ li a:hover{
         text-transform: uppercase;
     }
 
+    .contact-margin-below{
+        margin-bottom: 30px;
+    }
 
 /* PORTFOLIO TILES  */
 
@@ -429,7 +440,112 @@ li a:hover{
     }
 
 
+    /* FOOTER BLOCK ============================> */
 
+    .footer{
+        grid-area: footer;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(26, 26, 26);
+        padding: 20px 40px;
+        height: 10vh;
+    }
+    .list-one, .list-two{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: middle;
+        width: auto;
+        height: 100%;
+        font-size: .75rem;
+        list-style: none;
+        height: auto;
+        color: white;
+    }
+
+    .list-one li{
+        padding: 0 30px 0 0;
+    }
+
+    .list-one a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .list-two li{
+        padding: 0 0 0 0;
+    }
+
+    .list-two a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+    /* CONTACT PAGE BLOCK ============================> */
+
+    .page-contact-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto 99px;
+        grid-template-areas:
+        "nav nav nav nav nav nav "
+        "port-nav port-nav port-nav port-nav port-nav port-nav"
+        "page-banner page-banner page-banner page-banner page-banner page-banner"
+        "contact-block contact-block contact-block contact-block contact-block contact-block"
+        ". . . . . .";
+        column-gap: 60px;
+        padding: 0px;
+        height: auto;
+    }
+
+   
+
+    .contact-page-content{
+        grid-area: contact-block;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 530px;
+    }
+
+    .rock-on-text{
+        line-height: 2;
+        width: 70%;
+    }
+
+    .rock-on{
+        font-size: 1.3rem;
+        line-height: 1.25;
+    }
+
+    .socials-box1{
+        width:50%;
+        height: 100%;
+        padding: 130px 0 0 10px;
+    }
+    .socials-box2{
+        width:50%;
+        height: 100%;
+        padding: 130px 0 0 0;
+    }
+
+    .socials-box2 a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .social-btn-no-margin{
+        margin:0;
+    }
 
 
 
@@ -520,7 +636,7 @@ li a:hover{
     }
 
     .radam23-final-product{
-        background-image: url(images/radam23-final-product-desktop.svg);
+        background-image: url(images/radam23-final-product-shadow.png);
         background-size: contain;
     }
 
@@ -920,7 +1036,7 @@ li a:hover{
 
 .radam-final-prototype{
     height: 570px;
-    background-image: url(images/radam23-final-product-desktop.svg);
+    background-image: url(images/radam23-final-product-shadow.png);
 }
 
 
@@ -1365,7 +1481,8 @@ li a:hover{
     }
     .radam-tile6{
         background-image: url(images/radam-responsive-gif.gif);
-        background-size: cover;
+        background-size: 80%;
+        background-color: gray;
         background-position: 50% 50%;
     }
 
@@ -1401,7 +1518,6 @@ li a:hover{
     }
     
     .radam-final-prototype{
-        background-image: url(images/radam23-final-product-desktop.svg);
         background-size: contain;
         background-position: 50% 0%;
     }
@@ -1427,12 +1543,22 @@ li a:hover{
         font-weight: 300;
         line-height: 2;
         letter-spacing: 1px;
-        width: 80%;
+        width: 70%;
         min-width: 200px;
-        margin-top: 40px;
     }
 
+    .contact-text-home-margin{
+        margin-top: 40px;
+        max-width: 55%;
+    }
 
+    .margin-top-contact {
+        margin: 50px 0 0 0;
+    }
+
+        /*<===========    Contact page   ==============>*/
+
+  
 
 }
 
@@ -1732,7 +1858,6 @@ li a:hover{
     }
 
     .moodboard2-img{
-        height: 650px;
         background-repeat: no-repeat;
         background-size: 80%;
         background-position: 50% 50%;
@@ -1794,7 +1919,7 @@ li a:hover{
     }
     .radam-tile6{
         background-image: url(images/radam-responsive-gif.gif);
-        background-size: contain;
+        background-size: 93%;
         background-position: 50% 50%;
     }
     
@@ -1832,15 +1957,64 @@ li a:hover{
     }
  
     .radam-final-prototype{
-        background-image: url(images/radam23-final-product-desktop.svg);
+        background-image: url(images/radam23-final-product-shadow.png);
         background-size: contain;
-        height: 80vw;
+        height: 60vw;
         background-position: 50% 50%;
     }
 
+    .rmit-tile5{
+        background-size: 37vw;
+        height: 69vh;
+    }
 
     .walley-tile5{
-        background-size: 62%;
+        background-size: 37vw;
+        height: 69vh;
+    }
+
+
+    /* CONTACT PAGE BLOCK ============================> */
+  
+    .socials-box1{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        padding: 0 15vw 0 0;
+    }
+
+    .socials-box2{
+        padding: 40px 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rock-on-text{
+        width: 70%;
+        text-align: left;
+    }
+
+    /* FOOTER BLOCK ============================> */
+
+    .footer{
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .list-one {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list-one li{
+        padding: 0 0 30px 0;
     }
 
 }
@@ -2030,22 +2204,20 @@ li a:hover{
     }
 
     .radam23-final-product {
-        background-image: url(images/radam23-final-product-desktop.svg);
+        background-image: url(images/radam23-final-product-shadow.png);
         background-size: contain;
         background-position: 50% 50%;
+        background-color: lightgray;
     }
 
     .final-product{
         height: fit-content;
     }
 
+
     .rmit-final-product{
         background-position: 50% 50%;
         background-size: contain;
-    }
-
-    .radam23-final-product{
-        background-color: rgb(224, 224, 224);
     }
 
     .final-product-txt{
@@ -2141,17 +2313,28 @@ li a:hover{
         background-color: rgb(211, 211, 211);
     }
 
+    .contact-text-home-margin{
+        margin-top: 40px;
+    }
+
     .contact-text{
         font-weight: 300;
         line-height: 2;
         letter-spacing: 1px;
         width: 90%;
-        min-width: 200px;
-        margin-top: 40px;
     }
 
+    .socials-box1{
+        padding: 0 0 0 10px;
+        width: 100%;
+    }
+
+    .socials-box2{
+        padding: 0 0 0 10px;
+    }
+
+
     .moodboard2-img{
-        height: 650px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
@@ -2161,9 +2344,6 @@ li a:hover{
         height: 50vh;
     }
 
-    .rmit-tile5{
-        background-size: 90%;
-    }
 
     .margin-top{
         margin: 10px 0 0 0;
@@ -2199,8 +2379,7 @@ li a:hover{
     }
 
     .radam-tile6 {
-        height: 50vh;
-        background-color: gray;
+        height: 45vh;
         background-size: 90%;
         background-position: 50% 50%;
     }
@@ -2214,8 +2393,16 @@ li a:hover{
     }
 
 
+    .rmit-tile5{
+        background-size: 40vh;
+    }
+
     .walley-tile5{
-        background-size: 78%;
+        background-size: 45vw;
+    }
+
+    .contact-content{
+        padding: 0 0 100px 0;
     }
 
 }
@@ -2260,9 +2447,7 @@ li a:hover{
     }
 
     .moodboard2-img{
-        height: 110vw;
         background-repeat: no-repeat;
-        background-size: 81vw;
         background-position: 50% 50%;
     }
 
@@ -2279,17 +2464,35 @@ li a:hover{
         height: 130vw;
     }
 
+
+
     .rmit-tile6{
         background-size: 80vw;
     }
 
 
-    .walley-tile1, .walley-tile2, .walley-tile3, .walley-tile4, .walley-tile5, .final-product {
+    .walley-tile1, .walley-tile2, .walley-tile3, .walley-tile4,.final-product {
         height: 45vh;
         min-height: 80vw;
-}
+    }
+
+
+    .rmit-tile5{
+        background-size: 80vw;
+        height: 55vh;
+    }
+
+    .walley-tile5 {
+        background-size: 40vh;
+        height: 65vh;
+    }
 
     .walley-tile6{
         height: 55vh;
         background-size: 78vw;
     }
+
+    .contact-content{
+        padding: 0 0 100px 0;
+    }
+
