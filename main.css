@@ -310,6 +310,20 @@ li a:hover{
     align-items: center;
 }
 
+.home-tile-link{
+    color: black;
+    padding-top: 10px;
+    font-weight: 400;
+    text-decoration: underline;
+    font-size: .8rem;
+}
+
+.home-tile-link:hover{
+    color: black;
+    font-weight: 500;
+}
+
+
 .tile-img {
     grid-area: tile-img;
     background-size: cover;
@@ -318,7 +332,7 @@ li a:hover{
 }
 
 .tile-content{
-    padding: 40px 0 0 0;
+    padding: 40px 0 80px 0;
     height: auto;
 }
 
@@ -365,7 +379,10 @@ li a:hover{
 
 
     .img-walley{
-        background-image: url(images/placeholder1.jpg);
+        background-image: url(images/erol-ahmed-9ZWtkOCMxbM-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
     }
 
     .img-rmit{
@@ -377,11 +394,30 @@ li a:hover{
     }
 
     .img-hsbc{
-        background-image: url(images/placeholder1.jpg);
-        filter: opacity(70%) saturate(0%);
+        background-image: url(images/erik-mclean-tZTETcj9xBE-unsplash.jpg);
+        filter: opacity(90%) saturate(0%) brightness(90%);
     }
 
+    .tile-link {
+        color: black;
+        text-decoration: none;
+        border-bottom: white;
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+    }
 
+    .tile-link:hover{
+        border-bottom: black;
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+    }
+
+    .coming-soon-link{
+        text-decoration: none;
+        cursor:auto;
+    }
+
+ 
 
 /*  CONTACT GRID SECTION  ==============================> */
 
@@ -1099,11 +1135,10 @@ li a:hover{
     .portfolio-grid-home{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px auto 80px auto;
+        grid-template-rows: 60px auto auto;
         grid-template-areas:
         "section-title-block section-title-block"
         "tile-1 tile-2"
-        ". ."
         "tile-3 tile-4";
         column-gap: 30px;
         padding: 0px;
@@ -2025,9 +2060,23 @@ li a:hover{
     }
 
     .rmit-tile1{
-    height: 55vh;
+        height: 55vh;
     }
-
+    .contact-text{
+        font-size: .9rem;
+    }
+    .social-link-button{
+        font-size: .9rem;
+    }
+    .list-one, .list-two{    
+        font-size: .9rem;
+    }
+    .section-title-text{
+        font-size: .9rem;
+    }
+    .tile-title{
+        font-size: .9rem;
+    }
 }
 
 
@@ -2400,7 +2449,7 @@ li a:hover{
     }
 
     .tile-text{
-        margin-bottom: 5vh;
+        margin-bottom: 0;
     }
 
 
