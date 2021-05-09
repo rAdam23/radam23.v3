@@ -319,7 +319,7 @@ li a:hover{
 
 .tile-content{
     padding: 40px 0 0 0;
-    height: 300px;
+    height: auto;
 }
 
 .coming-soon{
@@ -1837,7 +1837,7 @@ li a:hover{
 
     .radam-tile4{
         background-size: cover;
-        background-position: 5% 50%;
+        background-position: 3% 0%;
     }
         
   /*<===========    Moodboards-Blister packets   ==============>*/
@@ -1879,6 +1879,7 @@ li a:hover{
         background-size: cover;
         background-position: 50% 50%;
         background-color: rgb(163, 163, 163);
+        height: 50vh;
     }
 
 
@@ -1902,10 +1903,11 @@ li a:hover{
 
 
     .walley-tile6{
-        height: 650px;
+        height: 64vh;
         background-image: url(images/Wireframing-Prototypes-mobile.png);
-        background-size: contain;
+        background-size: 40vh;
         background-position: 50% 50%;
+        background-color: lightgray;
     }
     .rmit-tile6{
         height: 550px;
@@ -1966,7 +1968,7 @@ li a:hover{
     }
 
     .walley-tile5{
-        background-size: 37vw;
+        background-size: 42vw;
         height: 69vh;
     }
 
@@ -2018,6 +2020,10 @@ li a:hover{
         padding: 0 0 30px 0;
     }
 
+
+    .title-tile-margin-top{
+        margin-top: 40px;
+    }
 }
 
 
@@ -2201,7 +2207,7 @@ li a:hover{
     }
 
     .intro3{
-        margin-bottom: 140px;
+        margin-bottom: 90px;
     }
 
     .radam23-final-product {
@@ -2399,11 +2405,15 @@ li a:hover{
     }
 
     .walley-tile5{
-        background-size: 45vw;
+        background-size: 55vw;
     }
 
     .contact-content{
         padding: 0 0 50px 0;
+    }
+
+    .contact-grid-margins{
+        margin: 70px 0 70px 0;
     }
 
 }
@@ -2457,7 +2467,7 @@ li a:hover{
     }
 
     .radam-tile5{
-        background-size: 140%;
+        background-size: cover;
         background-position: 90% 50%;
     }
 
@@ -2481,6 +2491,10 @@ li a:hover{
         min-height: 80vw;
     }
 
+    .final-product{
+        background-color: lightgray;
+    }
+
 
     .rmit-tile5{
         background-size: 80vw;
@@ -2488,8 +2502,8 @@ li a:hover{
     }
 
     .walley-tile5 {
-        background-size: 40vh;
-        height: 65vh;
+        background-size: 73vw;
+        height: 55vh;
     }
 
     .walley-tile6{
