@@ -2023,6 +2023,11 @@ li a:hover{
     .title-tile-margin-top{
         margin-top: 40px;
     }
+
+    .rmit-tile1{
+    height: 55vh;
+    }
+
 }
 
 
@@ -2258,7 +2263,7 @@ li a:hover{
 
     .rmit-tile1{
         height: 45vh;
-        background-color: rgb(133, 133, 133);
+        background-color:gray;
         background-size: 90%;
     }
 
