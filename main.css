@@ -1548,7 +1548,6 @@ li a:hover{
 
     .contact-text-home-margin{
         margin-top: 40px;
-        max-width: 55%;
     }
 
     .margin-top-contact {
@@ -2328,7 +2327,7 @@ li a:hover{
         font-weight: 300;
         line-height: 2;
         letter-spacing: 1px;
-        width: 90%;
+        width: 80%;
     }
 
     .socials-box1{
@@ -2453,13 +2452,14 @@ li a:hover{
         height: 50vh;
     }
 
-    .contact-text{
+    .contact-page-contact-text{
         min-width: auto;
     }
 
     .landing{
         height: 79vh;
     }
+
 
     .moodboard2-img{
         background-repeat: no-repeat;
