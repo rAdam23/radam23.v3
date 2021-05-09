@@ -449,7 +449,7 @@ li a:hover{
         justify-content: space-between;
         width: 100%;
         align-items: center;
-        background-color: rgb(26, 26, 26);
+        background-color: black;
         padding: 20px 40px;
         height: 10vh;
     }
@@ -492,18 +492,16 @@ li a:hover{
     .page-contact-grid{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto auto 99px;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
         "nav nav nav nav nav nav "
         "port-nav port-nav port-nav port-nav port-nav port-nav"
         "page-banner page-banner page-banner page-banner page-banner page-banner"
-        "contact-block contact-block contact-block contact-block contact-block contact-block"
-        ". . . . . .";
+        "contact-block contact-block contact-block contact-block contact-block contact-block";
         column-gap: 60px;
         padding: 0px;
         height: auto;
     }
-
    
 
     .contact-page-content{
@@ -514,7 +512,8 @@ li a:hover{
         align-items: center;
         flex-wrap: wrap;
         height: auto;
-        min-height: 530px;
+        min-height: 570px;
+        padding: 40px 0 90px 0;
     }
 
     .rock-on-text{
@@ -530,12 +529,12 @@ li a:hover{
     .socials-box1{
         width:50%;
         height: 100%;
-        padding: 130px 0 0 10px;
+        padding: 60px 0 0 10px;
     }
     .socials-box2{
         width:50%;
         height: 100%;
-        padding: 130px 0 0 0;
+        padding: 60px 0 0 0;
     }
 
     .socials-box2 a{
@@ -1631,9 +1630,7 @@ li a:hover{
         font-size: 1rem;
     }
 
-
     .banner-case-study{
-        margin-bottom: 90px;
         min-height: 300px;
     }
 
@@ -1976,6 +1973,10 @@ li a:hover{
 
     /* CONTACT PAGE BLOCK ============================> */
   
+    .contact-page-content {
+        min-height: 0px;
+    }
+
     .socials-box1{
         height: auto;
         width: 100%;
@@ -1988,7 +1989,7 @@ li a:hover{
     }
 
     .socials-box2{
-        padding: 40px 0;
+        padding: 60px 0;
         width: 100%;
         height: auto;
         display: flex;
@@ -2325,12 +2326,12 @@ li a:hover{
     }
 
     .socials-box1{
-        padding: 0 0 0 10px;
+        padding: 0 0 0 0;
         width: 100%;
     }
 
     .socials-box2{
-        padding: 0 0 0 10px;
+        padding: 0 0 0 0;
     }
 
 
@@ -2402,7 +2403,7 @@ li a:hover{
     }
 
     .contact-content{
-        padding: 0 0 100px 0;
+        padding: 0 0 50px 0;
     }
 
 }
@@ -2440,6 +2441,10 @@ li a:hover{
         background-position: 50% 50%;
         background-size: cover;
         height: 50vh;
+    }
+
+    .contact-text{
+        min-width: auto;
     }
 
     .landing{
@@ -2492,7 +2497,7 @@ li a:hover{
         background-size: 78vw;
     }
 
-    .contact-content{
-        padding: 0 0 100px 0;
+    .page-contact-grid{
+        column-gap: 25px;
     }
 
