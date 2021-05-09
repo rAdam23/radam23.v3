@@ -471,6 +471,15 @@ li a:hover{
         margin: 15px 0 0 0;
     }
 
+    .social-link-button a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .social-btn-extra-margin{
+        margin-top: 50px;
+    }
+
     .margin-top-contact{
         margin: 30px 0 0 0;
     }
